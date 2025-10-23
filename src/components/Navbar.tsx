@@ -195,22 +195,17 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center space-x-8">
             {menuItems.map((item) => (
-              <div
-                key={item.title}
-                className="relative group"
-                onMouseEnter={() => handleDropdownEnter(item.title)}
-                onMouseLeave={handleDropdownLeave}
-              >
+              <div key={item.title} className="relative group">
                 <Link
                   to={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className="flex items-center text-gray-600 hover:text-blue-600 transform hover:scale-110 transition-all duration-300 relative group"
-                  role="button"
+                  className="flex items-center px-3 py-2 text-gray-700 hover:text-blue-700 hover:bg-blue-50 rounded-md transition-all duration-300 relative"
                   aria-expanded={activeDropdown === item.title}
                   aria-haspopup={item.dropdown ? "true" : "false"}
-                  aria-selected={item.dropdown?.sections?.some(section =>
-                    section.items.some(subItem => subItem.id === highlightedItem)
-                  )}
+                  onMouseEnter={() => item.dropdown && setActiveDropdown(item.title)}
+                  onMouseLeave={() => item.dropdown && setActiveDropdown(null)}
+                  onFocus={() => item.dropdown && setActiveDropdown(item.title)}
+                  onBlur={() => item.dropdown && setActiveDropdown(null)}
                 >
                   {item.title}
                   {item.dropdown && (
@@ -218,11 +213,12 @@ const Navbar = () => {
                   )}
                   <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                 </Link>
-
                 {item.dropdown && activeDropdown === item.title && (
                   <div
-                    className="absolute top-full left-0 w-[450px] bg-white rounded-md shadow-lg py-4 transform opacity-0 -translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300"
+                    className="absolute top-full left-0 w-[450px] bg-white rounded-md shadow-lg py-4 z-20"
                     role="menu"
+                    onMouseEnter={() => setActiveDropdown(item.title)}
+                    onMouseLeave={() => setActiveDropdown(null)}
                   >
                     {item.dropdown.sections?.map((section, idx) => (
                       <div key={idx} className="px-4 mb-4">
@@ -233,24 +229,15 @@ const Navbar = () => {
                               key={subIdx}
                               to={subItem.href}
                               onClick={(e) => handleNavClick(e, subItem.href)}
-                              className={`flex items-start p-3 rounded-md group transition-all duration-300 ${
-                                highlightedItem === subItem.id
-                                  ? 'bg-blue-100 shadow-lg scale-105'
-                                  : 'hover:bg-blue-50'
-                              }`}
+                              className="flex items-start p-3 rounded-md group transition-all duration-300 hover:bg-blue-50 focus:bg-blue-100 focus:shadow-lg focus:scale-105"
                               role="menuitem"
-                              aria-selected={highlightedItem === subItem.id}
                               tabIndex={0}
                             >
                               {subItem.icon && (
-                                <subItem.icon className={`h-5 w-5 mt-1 mr-3 transition-colors duration-300 ${
-                                  highlightedItem === subItem.id ? 'text-blue-700' : 'text-blue-600'
-                                }`} />
+                                <subItem.icon className="h-5 w-5 mt-1 mr-3 text-blue-600 transition-colors duration-300 group-hover:text-blue-700 group-focus:text-blue-700" />
                               )}
                               <div className="flex-1">
-                                <div className={`text-sm font-medium transition-colors duration-300 ${
-                                  highlightedItem === subItem.id ? 'text-blue-700' : 'text-gray-900'
-                                }`}>{subItem.name}</div>
+                                <div className="text-sm font-medium text-gray-900 transition-colors duration-300 group-hover:text-blue-700 group-focus:text-blue-700">{subItem.name}</div>
                                 {subItem.description && (
                                   <p className="text-xs text-gray-500 mt-1">{subItem.description}</p>
                                 )}

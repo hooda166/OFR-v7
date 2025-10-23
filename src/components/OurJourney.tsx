@@ -13,13 +13,13 @@ const OurJourney = () => {
           </p>
           <div className="grid grid-cols-2 gap-4 mb-6">
             <img
-              src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=500&q=80"
-              alt="UV FRP production technology"
+              src="/Assets/Strategic expansion-1 pexels.jpg"
+              alt="Strategic Expansion 1"
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <img
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=500&q=80"
-              alt="Strategic acquisition and expansion"
+              src="/Assets/Strategic expansion-2 pexels.jpg"
+              alt="Infrastructure revolution 2"
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
           </div>
@@ -55,13 +55,13 @@ const OurJourney = () => {
           </p>
           <div className="grid grid-cols-2 gap-4 mb-6">
             <img
-              src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=500&q=80"
-              alt="Integrated manufacturing facility"
+              src="/Assets/Infrastructure revolution-1 pexels.jpg"
+              alt="Infrastructure revolution 1"
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <img
-              src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=500&q=80"
-              alt="Advanced production systems"
+              src="/Assets/Infrastructure revolution-2 pexels.jpg"
+              alt="Infrastructure revolution 2"
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
           </div>
@@ -97,13 +97,13 @@ const OurJourney = () => {
           </p>
           <div className="grid grid-cols-2 gap-4 mb-6">
             <img
-              src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=500&q=80"
-              alt="Optical fiber cable production"
+              src="/Assets/Optical fibre revolution pexels.jpg"
+              alt="Optical fibre revolution"
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <img
-              src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=500&q=80"
-              alt="Fiber optic technology advancement"
+              src="/Assets/Optical fibre revolution-1 pexels.jpg"
+              alt="Optical fibre revolution 1"
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
           </div>
@@ -134,18 +134,15 @@ const OurJourney = () => {
       title: "2020",
       content: (
         <div>
-          <p className="text-gray-600 text-xs md:text-sm font-normal mb-8">
-            Strategic expansion phase with the establishment of our second manufacturing facility, significantly enhancing production capacity and operational resilience while maintaining excellence in quality and delivery standards.
-          </p>
           <div className="grid grid-cols-2 gap-4 mb-6">
             <img
-              src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=500&q=80"
-              alt="Second manufacturing facility"
+              src="/Assets/Capacity expansion-2 pexels.jpg"
+              alt="Capacity Expansion 1"
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <img
-              src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=500&q=80"
-              alt="Enhanced production capabilities"
+              src="/Assets/Capacity expansion-1 unsplash.jpg"
+              alt="Capacity Expansion 2"
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
           </div>
@@ -176,18 +173,15 @@ const OurJourney = () => {
       title: "2016",
       content: (
         <div>
-          <p className="text-gray-600 text-xs md:text-sm font-normal mb-8">
-            The operational genesis of OFR Telecom with the successful commencement of FRP production, marking the beginning of our journey as a specialized manufacturer of high-quality fiber reinforced plastic solutions for the telecommunications industry.
-          </p>
           <div className="grid grid-cols-2 gap-4 mb-6">
             <img
-              src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=500&q=80"
-              alt="FRP production commencement"
+              src="/Assets/Production launch-1 pexels.jpg"
+              alt="Production launch 1"
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <img
-              src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=500&q=80"
-              alt="Manufacturing excellence"
+              src="/Assets/Production Launch-2 pexels.jpg"
+              alt="Production launch 2"
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
           </div>
@@ -219,31 +213,31 @@ const OurJourney = () => {
       content: (
         <div>
           <p className="text-gray-600 text-xs md:text-sm font-normal mb-8">
-            The foundational moment of OFR Telecom with official company incorporation in October 2015, establishing the corporate framework and vision that would drive our mission to revolutionize fiber optic infrastructure through innovative solutions and manufacturing excellence.
+            The foundation of OFR Telecom, laying the groundwork for a journey of innovation, quality, and customer-centric growth in the fiber optic industry.
           </p>
           <div className="grid grid-cols-2 gap-4 mb-6">
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80"
-              alt="Company incorporation"
+              src="/Assets/Company Foundation-1 Unsplash.avif"
+              alt="Company Foundation"
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <img
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=500&q=80"
-              alt="Corporate foundation and vision"
+              src="/Assets/Company foundation-2 Unsplash.jpg"
+              alt="Company Foundation 2"
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
           </div>
           <div className="mb-8">
             <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-              <Building className="h-5 w-5 text-blue-600 mr-2" />
-              Corporate Foundation & Vision
+              <Award className="h-5 w-5 text-blue-600 mr-2" />
+              Foundation & Vision
             </h4>
             <div className="space-y-2">
               <div className="flex gap-2 items-center text-gray-600 text-xs md:text-sm">
-                • Official company incorporation completed in October 2015
+                • Company incorporated in October 2015
               </div>
               <div className="flex gap-2 items-center text-gray-600 text-xs md:text-sm">
-                • Established corporate structure and governance framework
+                • Vision to revolutionize fiber optic infrastructure
               </div>
               <div className="flex gap-2 items-center text-gray-600 text-xs md:text-sm">
                 • Defined vision for fiber optic infrastructure innovation

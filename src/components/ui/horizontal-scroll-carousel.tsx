@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import { motion } from "framer-motion";
 import { useMemo, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -161,7 +160,8 @@ const HorizontalScrollCarousel: React.FC<HorizontalScrollCarouselProps> = ({
         {canScrollLeft && (
           <button
             onClick={() => scroll('left')}
-            className="absolute left-1 sm:left-2 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full p-2 sm:p-3 transition-all duration-200 hover:scale-110 touch-manipulation"
+            className="absolute top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full p-2 sm:p-3 transition-all duration-200 hover:scale-110 touch-manipulation"
+            style={{ left: -36 }}
             disabled={isScrolling}
             aria-label="Scroll left"
           >
@@ -172,7 +172,8 @@ const HorizontalScrollCarousel: React.FC<HorizontalScrollCarouselProps> = ({
         {canScrollRight && (
           <button
             onClick={() => scroll('right')}
-            className="absolute right-1 sm:right-2 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full p-2 sm:p-3 transition-all duration-200 hover:scale-110 touch-manipulation"
+            className="absolute top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full p-2 sm:p-3 transition-all duration-200 hover:scale-110 touch-manipulation"
+            style={{ right: -36 }}
             disabled={isScrolling}
             aria-label="Scroll right"
           >
@@ -183,7 +184,7 @@ const HorizontalScrollCarousel: React.FC<HorizontalScrollCarouselProps> = ({
         {/* Scrollable Container - Manual scroll only */}
         <div
           ref={scrollContainerRef}
-          className="flex gap-4 sm:gap-6 overflow-x-auto scrollbar-hide pb-4 scroll-smooth"
+          className="flex gap-4 sm:gap-6 overflow-x-auto scrollbar-hide pb-4 pr-6 lg:pr-8 scroll-smooth"
           style={{
             scrollbarWidth: 'none', // Firefox
             msOverflowStyle: 'none', // IE/Edge
@@ -213,19 +214,31 @@ const HorizontalScrollCarousel: React.FC<HorizontalScrollCarouselProps> = ({
 const ProductCard: React.FC<{ product: ProductCard }> = ({ product }) => {
   return (
     <div 
-      className="group relative h-[480px] w-[320px] sm:w-[380px] lg:w-[400px] bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex-shrink-0"
+      className="group relative h-[480px] w-[300px] sm:w-[360px] lg:w-[380px] bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex-shrink-0"
       style={{ scrollSnapAlign: 'start' }} // Ensure cards snap into view properly
     >
       {/* Header with optional image */}
       {product.image && (
-        <div className="relative h-44 overflow-hidden">
+        // Use a slightly taller header so 'contain' images have room
+        <div className="relative h-56 overflow-hidden">
           <img
             src={product.image}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            className={`w-full h-full ${[
+              'EAA Coated FRP',
+              'Standard FRP Rodder',
+              'Heavy Duty FRP Rodder',
+              'Uncoated ARP',
+              'Coated ARP',
+              'ADSS Cables (All-Dielectric Self-Supporting)',
+              'Duct Cables',
+              'Optical Splitters (PLC)',
+              'Fiber Management Systems (FMS)'
+            ].includes(product.name) ? 'object-contain' : 'object-cover'} object-center group-hover:scale-105 transition-transform duration-500`}
             alt={product.name}
             loading="lazy"
             onError={(e) => {
-              e.currentTarget.src = 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&q=80';
+              // fallback to a bundled asset if the specified path fails
+              e.currentTarget.src = '/Assets/FTTH cable.jpg';
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

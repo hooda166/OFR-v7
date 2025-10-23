@@ -1,6 +1,5 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowRight, Globe, Shield, Target, Users, Zap, MapPin, Award, Phone, Network, Satellite, Cable, Box, Wrench, Layers, Settings } from 'lucide-react';
+import { ArrowRight, Globe, Shield, Target, Users, Zap, MapPin, Award, Phone, Network, Satellite, Cable, Box, Wrench, Settings } from 'lucide-react';
 import VideoBackground from '../components/VideoBackground';
 
 const HomePage = () => {
@@ -21,7 +20,8 @@ const HomePage = () => {
     {
       id: 'frp-products',
       title: 'FRP Products',
-      image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&q=80',
+      // use EAA coated FRP image instead so it's a different product image from the section
+      image: '/Assets/EAA Coated FRP.avif',
       description: 'Comprehensive fiber reinforced plastic solutions for cable reinforcement',
       icon: Cable,
       products: ['Uncoated Bare FRP', 'EAA Coated FRP', 'Water Blocking FRP', 'Thermal FRP']
@@ -29,7 +29,7 @@ const HomePage = () => {
     {
       id: 'frp-rodder',
       title: 'FRP Rodder & Tools',
-      image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1200&q=80',
+      image: '/Assets/FRP rodder.jpg',
       description: 'Professional installation tools and rodders',
       icon: Wrench,
       products: ['Standard FRP Rodder', 'Heavy Duty Rodder']
@@ -37,7 +37,8 @@ const HomePage = () => {
     {
       id: 'arp-products',
       title: 'ARP Products',
-      image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1200&q=80',
+      // use Coated ARP image to be a different product image in the ARP section
+      image: '/Assets/Coated ARP.jpeg',
       description: 'Advanced aramid reinforced plastic solutions',
       icon: Shield,
       products: ['Uncoated ARP', 'Coated ARP']
@@ -45,7 +46,7 @@ const HomePage = () => {
     {
       id: 'cable-fillers',
       title: 'Cable Fillers',
-      image: 'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=1200&q=80',
+      image: '/Assets/HDPE Filler.jpg',
       description: 'Quality filling materials for cable construction',
       icon: Box,
       products: ['HDPE Fillers', 'LDPE Fillers']
@@ -53,7 +54,7 @@ const HomePage = () => {
     {
       id: 'optical-fiber-cables',
       title: 'Optical Fiber Cables',
-      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80',
+      image: '/Assets/armoured Optical fibre cable.jpg',
       description: 'Complete range of fiber optic cables',
       icon: Zap,
       products: ['Armoured Cables', 'ADSS Cables', 'Duct Cables', 'FTTH Cables']
@@ -61,7 +62,7 @@ const HomePage = () => {
     {
       id: 'passive-components',
       title: 'Passive Components',
-      image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80',
+      image: '/Assets/Optical splitter.jpg',
       description: 'Essential passive optical components',
       icon: Network,
       products: ['Optical Splitters', 'Couplers', 'WDM Devices', 'Attenuators', 'Pigtails', 'Connectors', 'Adapters']
@@ -69,7 +70,7 @@ const HomePage = () => {
     {
       id: 'connectivity-accessories',
       title: 'Connectivity & Accessories',
-      image: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=1200&q=80',
+      image: '/Assets/FIber Management systems.jpg',
       description: 'Complete connectivity and installation accessories',
       icon: Settings,
       products: ['FMS/FDMS', 'Patch Cords', 'Termination Boxes', 'Splice Closures']
@@ -200,10 +201,11 @@ const HomePage = () => {
                 className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
               >
                 <div className="relative overflow-hidden">
+                  {/* Use taller header and object-contain for some categories to ensure full image visibility */}
                   <img
                     src={category.image}
                     alt={category.title}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                    className={`w-full h-56 ${['frp-rodder','passive-components','connectivity-accessories','frp-products','arp-products'].includes(category.id) ? 'object-contain' : 'object-cover'} group-hover:scale-110 transition-transform duration-500`}
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

@@ -1,5 +1,4 @@
-import React from 'react';
-import { Building, Award, Shield, Leaf, Factory, Users, Target, Scale, Zap, CheckCircle, Wrench, FileText, Settings } from 'lucide-react';
+import { Award, Shield, Users, Target, CheckCircle, Wrench, FileText, Settings } from 'lucide-react';
 
 const CompanyProfile = () => {
   return (
@@ -7,7 +6,7 @@ const CompanyProfile = () => {
       {/* Core Values Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8 md:mb-12 lg:mb-16 mt-8 md:mt-12 lg:mt-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">We Are the Essential Link</h2>
           </div>
 
@@ -142,20 +141,19 @@ const CompanyProfile = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Organizational Strengths</h2>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-            <div className="flex flex-col lg:flex-row">
+          <div className="bg-white rounded-2xl shadow-lg overflow-hidden px-2 md:px-6 py-6 md:py-10 lg:py-12">
+            <div className="flex flex-col lg:flex-row h-auto lg:h-[350px]">
               {/* Image Section - Left Side */}
-              <div className="lg:w-[45%] h-64 lg:h-auto">
+              <div className="lg:w-[45%] h-64 lg:h-full">
                 <img
-                  src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80"
-                  alt="Professional working on electronics and hardware"
-                  className="w-full h-full object-cover"
+                  src="/Assets/Organizational strengths - Google.jpg"
+                  alt="Organizational strengths"
+                  className="w-full h-full object-cover object-center rounded-none"
                   loading="lazy"
                 />
               </div>
-              
               {/* Content Section - Right Side */}
-              <div className="lg:w-[55%] p-6 lg:p-8 flex flex-col justify-center">
+              <div className="lg:w-[55%] p-6 lg:p-8 flex flex-col justify-center h-full">
                 <h3 className="text-2xl font-bold text-gray-900 mb-8">Our Key Strengths</h3>
                 
                 <div className="space-y-6">
